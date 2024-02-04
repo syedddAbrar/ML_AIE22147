@@ -1,37 +1,31 @@
 def find_pairs_with_sum(arr, target):
     length = len(arr)
     pairs = []
-
-    # Iterate through each element in the array
+#goes through each element in the array
     for i in range(length):
-        # Iterates through elements after the current element
+        # goes through elements after the current element
         for j in range(i + 1, length):
-            # Checks if the sum of the pair is equal to the target
+            #if the sum of the pair is equal to the target then it adds in the pairs array.
             if arr[i] + arr[j] == target:
-                # Increment count for each pair found
                 pairs.append((arr[i], arr[j]))
-
     return pairs
 
 def main():
     my_list = []
-    num_elements = int(input("Enter the number of elements in the list: "))
+    num_elements = int(input("Enter the number of elements in the list:: "))
 
-    # Get user input for each element in the list
+    # using for loops to get user input for each element in the list
     for i in range(num_elements):
-        element = int(input(f"Enter element {i + 1}: "))
+        element = int(input(f"Enter the element {i + 1}: "))
         my_list.append(element)
-
-    target_sum = int(input("Enter the target sum: "))
+O
+    target_sum = int(input("Enter the sum: "))
     
     # Find and display pairs with the target sum
     pairs = find_pairs_with_sum(my_list, target_sum)
     
     if not pairs:
-        print("No pairs found with the given target sum.")
+        print("sorry, no such pairs have been forund in the given list...")
     else:
-        print(f"Pairs with the target sum {target_sum}: {pairs}")
-
-if __name__ == "__main__":
-    # Run the main function if the script is executed
-    main()
+        print(f"pairs of the sum {target_sum}: {pairs}")
+main()
