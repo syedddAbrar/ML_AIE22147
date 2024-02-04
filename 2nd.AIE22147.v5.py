@@ -1,9 +1,9 @@
 def range_of_list(user_list, m):
-    # Check if the list has less than or equal to 3 elements
+    # Checking if the list has less than or equal to 3 elements
     if m <= 3:
         return "It's not possible to determine the range."
     else:
-        # Get user input for the list
+        # Gets user input for the list
         user_list_input(user_list, m)
         
         # Calculate the minimum and maximum values in the list
@@ -20,9 +20,9 @@ def user_list_input(user_list, m):
         user_list.append(element)
     return user_list
 
-# Get the number of elements in the list from the user
+# Gets the number of elements in the list from the user
 num_elements = int(input("Enter the number of elements in the list: "))
 user_list = []
 
-# Display the range between the largest and smallest number in the list
+# It Display the range between the largest and smallest number in the list
 print(f"The range between the largest and smallest number is {range_of_list(user_list, num_elements)}")
